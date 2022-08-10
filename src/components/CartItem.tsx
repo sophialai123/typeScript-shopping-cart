@@ -20,7 +20,7 @@ export default function CartItem({ id, quantity }: CartItemProps) {
       className="d-flex align-items-center"
     >
       <img src={item.image}
-        style={{ width: "125px", height: "75px ", objectFit: "cover" }} />
+        style={{ width: "125px", height: "75px ", objectFit: "cover" }} alt={item.image} />
       <div className="me-auto">
         {item.name}{" "}
         {/* show it when quanity is greater than 1 */}

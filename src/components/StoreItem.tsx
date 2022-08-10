@@ -13,7 +13,7 @@ type StoreItemProps = {
 
 export default function StoreItem({ id, name, price, image, category }: StoreItemProps) {
 
-  const { getItemQty, increaseItemQty, decreaseItemQty, removeItemQty, cartItems, cartQuantity } = UserShoppingCart();
+  const { getItemQty, increaseItemQty, decreaseItemQty, removeItemQty } = UserShoppingCart();
   const quantity = getItemQty(id)
   return (
     <>
