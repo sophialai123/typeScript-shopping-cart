@@ -3,6 +3,7 @@ import { UserShoppingCart } from "../context/UserShoppingCart";
 import CartItem from '../components/CartItem';
 import storeItems from "../data/items.json";
 
+
 type ShoppingCartType = {
   isOpen: boolean
 }
