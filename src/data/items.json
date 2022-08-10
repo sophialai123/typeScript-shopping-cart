@@ -50,14 +50,14 @@
   },
   {
     "id": 8,
-    "name": "Brinjal - 1 Kg",
+    "name": "Brinjal - 1 Kg ",
     "price": 15,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg",
     "category": "vegetables"
   },
   {
     "id": 9,
-    "name": "Capsicum",
+    "name": "Capsicum - 1 Kg",
     "price": 9.99,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg",
     "category": "vegetables"

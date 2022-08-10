@@ -7,7 +7,6 @@ export default function Navbar() {
   const { openCart, cartQuantity } = UserShoppingCart()
   return (
     <NavbarBs sticky="top" className='bg-white mb-3 shadow-sm'>
-
       <Container>
         <Nav>
           {/* use Nav.Link from boostrap, as Link is from the react-router-dom */}

@@ -22,7 +22,6 @@ export default function StoreItem({ id, name, price, image, category }: StoreIte
         <Card.Img variant="top" src={image}
           height="300px"
         />
-
         <Card.Body className="d-flex flex-column mt-3">
           <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
             <span className="fs-3">{name}</span>
