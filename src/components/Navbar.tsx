@@ -6,15 +6,12 @@ import { UserShoppingCart } from "../context/UserShoppingCart";
 export default function Navbar() {
   const { openCart, cartQuantity } = UserShoppingCart()
   return (
-    <NavbarBs sticky="top" className='bg-white mb-3 shadow-sm'>
+    <NavbarBs sticky="top" className='bg-light mb-3 shadow-sm'>
       <Container>
         <Nav>
           {/* use Nav.Link from boostrap, as Link is from the react-router-dom */}
-          <Nav.Link to='/' as={Link}>
-            Home
-          </Nav.Link >
-          <Nav.Link to='/store' as={Link}>
-            Store
+          <Nav.Link to='/' as={Link} className="fs-3 text-primary">
+            Super Healthy
           </Nav.Link >
         </Nav>
         <Button

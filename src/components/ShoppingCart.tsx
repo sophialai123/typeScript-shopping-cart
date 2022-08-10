@@ -23,8 +23,8 @@ export function ShoppingCart({ isOpen }: ShoppingCartType) {
               {...item}
             />
           )}
-          <div className="ms-auto fw-fold fs-3">
-            Total: ${" "}
+          <div className="ms-auto fw-fold fs-4">
+            Total: $
             {cartItems.reduce((total, cartItem) => {
               const item = storeItems.find(item => item.id === cartItem.id)
               return total + (item?.price || 0) * cartItem.quantity;
