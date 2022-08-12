@@ -28,8 +28,9 @@ type CartItem = {
   quantity: number
 }
 
-const ShoppingCartContext = createContext({} as ShoppingCartContextType)
 
+//createContext type is ShoppingCartContextType
+const ShoppingCartContext = createContext({} as ShoppingCartContextType)
 
 export function UserShoppingCart() {
   return (
@@ -59,17 +60,18 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
   function increaseItemQty(id: number) {
     setCartItems(currItems => {
-      //if the item does not exsit, then quantity is 1
+      //if the item does not exsit, then add quantity to 1
       if (currItems.find(item => item.id === id) == null) {
         return [...currItems, { id, quantity: 1 }]
       }
       //add new items
       else {
         return currItems.map(item => {
+          //if find the item, then add more quantity on top of it,
           if (item.id === id) {
             return { ...item, quantity: item.quantity + 1 }
           } else {
-            return item
+            return item // otherwise just return exsiting item
           }
         })
       }
@@ -78,10 +80,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
   function decreaseItemQty(id: number) {
     setCartItems(currentItems => {
-      //if the item does not exsit, then quantity is 1
+      //if the item quantity is 1, then remove it 
       if (currentItems.find(item => item.id === id)?.quantity === 1) {
         return currentItems.filter(item => item.id !== id)
-      } else {
+      }
+      //otherwise current iteam quantity -1
+      else {
         return currentItems.map(item => {
           if (item.id === id) {
             return { ...item, quantity: item.quantity - 1 }

@@ -11,6 +11,7 @@ type CartItemProps = {
 export default function CartItem({ id, quantity }: CartItemProps) {
   const { removeItemQty } = UserShoppingCart();
   const item = storeItems.find(item => item.id === id)
+  //if the item is null then return null
   if (item == null) return null;
 
   return (
@@ -20,12 +21,13 @@ export default function CartItem({ id, quantity }: CartItemProps) {
       className="d-flex align-items-center"
     >
       <img src={item.image}
-        style={{ width: "125px", height: "75px ", objectFit: "cover" }} alt={item.image} />
+        style={{ width: "125px", height: "75px ", objectFit: "cover" }} alt={item.name} />
       <div className="me-auto">
         {item.name}{" "}
         {/* show it when quanity is greater than 1 */}
         {quantity > 1 && (
-          <span className="text-muted">{quantity}x</span>
+          <span className="text-muted" style={{ fontSize: "0.8rem" }}>
+            x {quantity}</span>
         )}
         <div className="text-muted">
           ${item.price.toFixed(2)}
